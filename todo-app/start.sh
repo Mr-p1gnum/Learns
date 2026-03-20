@@ -1,0 +1,1 @@
+cd /todo-app \     python3 -m venv /path/to/venv \     source /path/to/venv/bin/activate \      python app.py
