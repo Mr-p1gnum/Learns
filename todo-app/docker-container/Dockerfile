@@ -10,9 +10,9 @@ RUN set -e && \
     source /path/to/venv/bin/activate && \ 
     pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
-    python app.py && \
     deactivate && \
-    echo "cd /todo-app \
+    echo "#!/bin/bash \
+     cd /todo-app \
      python3 -m venv /path/to/venv \
      source /path/to/venv/bin/activate \ 
      python app.py"> start.sh && chmod +x start.sh
