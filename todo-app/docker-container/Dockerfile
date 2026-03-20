@@ -1,4 +1,4 @@
-FROM alpine:latest AS build
+FROM alpine:3.23 AS build
 
 WORKDIR /todo-app
 COPY static tempates app.py database.py requirements.txt schema.sql /todo-app/
