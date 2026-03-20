@@ -12,8 +12,8 @@ RUN set -e && \
     pip install --no-cache-dir -r requirements.txt && \
     deactivate && \
     echo "#!/bin/bash \
-     cd /todo-app \
+     source /path/to/venv/bin/activate \
      python3 -m venv /path/to/venv \
-     source /path/to/venv/bin/activate \ 
-     python app.py"> start.sh && chmod +x start.sh
+     cd /todo-app \ 
+     python app.py"> /start.sh && chmod +x /start.sh
 CMD ["./start.sh"]
