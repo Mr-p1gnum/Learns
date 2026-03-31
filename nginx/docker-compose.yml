@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  revers-proxy:
+    image: nginx:1.28-alpine
+    ports:
+      - "80:80"
+    container_name: Revers-proxy
+    volumes:
+      - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    stdin_open: true   # аналог -i
+    tty: true          # аналог -t
+    restart: 'unless-stopped'
